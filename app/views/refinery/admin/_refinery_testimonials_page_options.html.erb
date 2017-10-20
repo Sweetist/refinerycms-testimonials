@@ -23,14 +23,24 @@
         <%= refinery_help_tag t('.testimonials_select_help') %>
       </span>
       <p>
-        Select Testimonals By
+        <%= t('.select_testimonals_by') %>
       </p>
       <%= f.radio_button  :testimonials_select,  'Recent' %>
-      <%= f.label :testimonials_select, 'By date (Recent first)', :value=> 'Recent', :class=>'stripped'%>
+      <%= f.label :testimonials_select, t('.by_date'), :value=> 'Recent', :class=>'stripped'%>
       <br />
       <%= f.radio_button  :testimonials_select,  'Random' %>
-      <%= f.label :testimonials_select, 'Random', :value => 'Random', :class=>'stripped' %>
+      <%= f.label :testimonials_select, t('.random'), :value => 'Random', :class=>'stripped' %>
+      <br />
+      <%= f.radio_button  :testimonials_select,  'Select' %>
+      <%= f.label :testimonials_select, t('.select'), :value => 'Select', :class=>'stripped' %>     
     </div>
+
+    <div class='field'>
+      <%= f.label t('.select_review_ids') -%>
+      aaa
+      <%= f.collection_select :review_ids, @testimonials, :id, :name, {}, {:multiple => true} %>
+    </div>   
+
   </div>
 </div>
 

@@ -1,0 +1,14 @@
+
+<% content_for :body do %>
+  <ul id="testimonials">
+    <% @testimonials.each do |testimonial| %>
+      <li>
+        <p>
+          <%= link_to testimonial.name, refinery.testimonials_testimonial_path(testimonial) %> <%= testimonial.teaser unless !testimonial.teaser %>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+<%= render '/refinery/content_page' %>
+
