@@ -38,8 +38,8 @@ if !ENV['TRAVIS'] || ENV['DB'] == 'postgresql'
 end
 
 # Refinery/rails should pull in the proper versions of these
-gem 'sass-rails', '~> 4.0.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'sass-rails'
+gem 'coffee-rails'
 
 # Load local gems according to Refinery developer preference.
 if File.exist? local_gemfile = File.expand_path('../.gemfile', __FILE__)

@@ -19,7 +19,7 @@ module Refinery
         define_method("#{meth}?") { channels == index }
       end
 
-      acts_as_indexed :fields => [:name, :company]
+      #acts_as_indexed :fields => [:name, :company]
 
       validates :name, :presence => true, :uniqueness => true
       validates :quote, :presence => true
